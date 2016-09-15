@@ -9,17 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var home_component_1 = require('./home.component');
+var widgets_module_1 = require("../widgets/widgets.module");
+var HomeModule = (function () {
+    function HomeModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'app',
-            template: "\n    <nav>\n        <a routerLink=\"\">Home</a>\n        <a routerLink=\"contact\">Contact</a>\n</nav>\n<router-outlet></router-outlet>"
+    HomeModule = __decorate([
+        core_1.NgModule({
+            imports: [widgets_module_1.WidgetsModule],
+            declarations: [home_component_1.HomeComponent],
+            exports: [home_component_1.HomeComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], HomeModule);
+    return HomeModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.HomeModule = HomeModule;
+//# sourceMappingURL=home.module.js.map

@@ -8,18 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var SimpleService = (function () {
+    function SimpleService() {
+        this.message = "This message is from the most simplest service ever";
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'app',
-            template: "\n    <nav>\n        <a routerLink=\"\">Home</a>\n        <a routerLink=\"contact\">Contact</a>\n</nav>\n<router-outlet></router-outlet>"
-        }), 
+    SimpleService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], SimpleService);
+    return SimpleService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.SimpleService = SimpleService;
+//# sourceMappingURL=simple.service.js.map

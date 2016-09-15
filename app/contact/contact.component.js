@@ -8,18 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var ContactComponent = (function () {
+    function ContactComponent() {
     }
-    AppComponent = __decorate([
+    ContactComponent = __decorate([
         core_1.Component({
-            selector: 'app',
-            template: "\n    <nav>\n        <a routerLink=\"\">Home</a>\n        <a routerLink=\"contact\">Contact</a>\n</nav>\n<router-outlet></router-outlet>"
+            selector: 'contact',
+            templateUrl: 'app/contact/contact.view.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ContactComponent);
+    return ContactComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ContactComponent = ContactComponent;
+//# sourceMappingURL=contact.component.js.map

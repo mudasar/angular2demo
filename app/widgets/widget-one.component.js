@@ -8,18 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var WidgetOne = (function () {
+    function WidgetOne() {
+        this.selected = false;
     }
-    AppComponent = __decorate([
+    WidgetOne.prototype.onInit = function () {
+        console.log("i am called");
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], WidgetOne.prototype, "msg", void 0);
+    WidgetOne = __decorate([
         core_1.Component({
-            selector: 'app',
-            template: "\n    <nav>\n        <a routerLink=\"\">Home</a>\n        <a routerLink=\"contact\">Contact</a>\n</nav>\n<router-outlet></router-outlet>"
+            selector: 'widget-one',
+            styles: ["\n    *{\n        font-family:\"Times New Roman\";\n    }\n    "],
+            template: "this is a shared widget with name one.\n        <div *ngIf=\"selected\" >hello</div>\n        <h4>{{msg}}</h4>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WidgetOne);
+    return WidgetOne;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WidgetOne = WidgetOne;
+//# sourceMappingURL=widget-one.component.js.map

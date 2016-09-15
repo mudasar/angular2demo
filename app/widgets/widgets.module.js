@@ -8,18 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var widget_one_component_1 = require("./widget-one.component");
+var common_1 = require("@angular/common");
+var widget_two_component_1 = require("./widget-two.component");
+var WidgetsModule = (function () {
+    function WidgetsModule() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'app',
-            template: "\n    <nav>\n        <a routerLink=\"\">Home</a>\n        <a routerLink=\"contact\">Contact</a>\n</nav>\n<router-outlet></router-outlet>"
+    WidgetsModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo],
+            exports: [widget_one_component_1.WidgetOne, widget_two_component_1.WidgetTwo, common_1.CommonModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WidgetsModule);
+    return WidgetsModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WidgetsModule = WidgetsModule;
+//# sourceMappingURL=widgets.module.js.map
